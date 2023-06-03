@@ -3,10 +3,10 @@
 
 #include "Gorky.h"
 
-using namespace std;
-
 int main()
 {
+    using std::cout;
+    using std::endl;
     cout << "Hello CMake." << endl;
     return 0;
 }
