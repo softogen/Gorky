@@ -11,8 +11,13 @@ endif()
 
 project ("Gorky")
 
+find_package(fmt CONFIG REQUIRED)
+find_package(gtest CONFIG REQUIRED)
+
 # Add source to this project's executable.
 add_executable (Gorky "Gorky.cpp" "Gorky.h")
+
+target_link_libraries(Gorky PRIVATE fmt::fmt GTest::gmock)
 
 set_property(TARGET Gorky PROPERTY CXX_STANDARD 17)
 

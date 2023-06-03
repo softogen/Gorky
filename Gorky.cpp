@@ -2,11 +2,13 @@
 //
 
 #include "Gorky.h"
+#include <fmt/format.h>
+#include <gmock/gmock.h>
 
 int main()
 {
     using std::cout;
     using std::endl;
-    cout << "Hello CMake." << endl;
+    cout << fmt::format("Hello CMake. {}", "!!!") << endl;
     return 0;
 }
